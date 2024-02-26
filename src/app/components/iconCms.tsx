@@ -11,4 +11,5 @@ export function CMSIcon({ icon, className }: CMSIconProps) {
         __html: icon,
       }}
     />
-  )}
+  )
+}

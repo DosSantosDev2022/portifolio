@@ -1,18 +1,18 @@
-import Link from "next/link"
+import Link from 'next/link'
 
 export function Header() {
   const links = [
     {
-      nome : 'Home',
-      Url : '/'
+      nome: 'Home',
+      Url: '/',
     },
     {
-      nome : 'Projetos',
-      Url : '/Projects'
+      nome: 'Projetos',
+      Url: '/Projects',
     },
     {
-      nome : 'Contato',
-      Url : '/Contact'
+      nome: 'Contato',
+      Url: '/Contact',
     },
   ]
   return (
