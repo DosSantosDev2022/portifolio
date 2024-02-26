@@ -1,4 +1,10 @@
+// next.config.js
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: ['media.graphassets.com'],
+  },
+};
 
 export default nextConfig;
