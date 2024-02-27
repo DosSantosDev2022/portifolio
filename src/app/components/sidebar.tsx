@@ -4,6 +4,8 @@ import { SocialNetworkContainer } from './socialNetworkContainer'
 import Link from 'next/link'
 import { fetchHygraph } from '../api/fetchHygraph'
 import { SideBar } from '@/types/dataTypes'
+import { Button } from './button'
+import { Modal } from '@/app/components/modal'
 
 const GET_ALL_DATA_SIDEBAR = async (): Promise<SideBar> => {
   const query = `
@@ -48,12 +50,16 @@ export async function SideBar() {
         <h2 className="font-bold text-purple-700">Desenvolvedor FullStack</h2>
         <SocialNetworkContainer data={data} />
         <InformationContainer data={data} />
-        <Link
-          href="#"
-          className="text-zinc-50 bg-zinc-900 p-2 rounded-md hover:bg-zinc-950 duration-500 transition-all"
-        >
-          Ver Currículo
-        </Link>
+        <div className="flex gap-2">
+          <Button
+            asChild
+            className="bg-zinc-900 text-zinc-50 hover:bg-zinc-700"
+          >
+            <Link href="#">Ver Currículo</Link>
+          </Button>
+
+          <Modal />
+        </div>
       </div>
     </aside>
   )
