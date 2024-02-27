@@ -65,7 +65,7 @@ export default async function ProjectPageDetails({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-20 px-6 py-28 lg:px-16  ">
+    <div className="flex flex-col items-center justify-center gap-20 px-6 py-7 lg:px-16  ">
       <div className="relative h-[200px] w-full lg:h-[450px]">
         <div
           className="absolute inset-0 z-[-1]  "
