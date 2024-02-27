@@ -15,10 +15,10 @@ export function Hero({ urlImage, paragraph, subtitle, title }: HeroProps) {
         backgroundRepeat: 'no-repeat',
       }}
     >
-      <div className="w-[500px] ">
-        <h1 className="text-zinc-500 font-bold text-4xl">{title} </h1>
-        <p className="font-medium text-2xl text-purple-900">{subtitle} </p>
-        <p className="text-md font-light text-zinc-100">{paragraph}</p>
+      <div className="w-[500px] flex flex-col ">
+        <h1 className="text-zinc-50 font-bold text-6xl">{title} </h1>
+        <p className="font-bold text-2xl text-purple-600">{subtitle} </p>
+        <p className="text-md font-light text-zinc-100 mt-2">{paragraph}</p>
       </div>
     </div>
   )
