@@ -16,7 +16,7 @@ export function InformationContainer({ data }: InformationContainerProps) {
             key={item.id}
             className="flex justify-start gap-4 rounded-sm w-full"
           >
-            <CMSIcon icon={item.iconSvg} />
+            <CMSIcon icon={item.iconSvg} className="text-purple-600" />
             <div className="flex flex-col gap-1 text-zinc-50">
               <h3 className="font-bold">{item.title} </h3>
               <p className="text-sm font-light">{item.contact} </p>
