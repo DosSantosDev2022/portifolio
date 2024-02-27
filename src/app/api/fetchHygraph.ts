@@ -1,16 +1,19 @@
-export const fetchHygraph = async <T> (query : string) : Promise<T> => {
+export const fetchHygraph = async <T>(
+  query: string,
+  varibles?: Record<string, any>,
+): Promise<T> => {
   const response = await fetch(process.env.HYGRAPH_API || '', {
     method: 'POST',
     headers: {
-      'Content-Type' : 'application/json',
+      'Content-Type': 'application/json',
       Accept: 'application/json',
-      Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`
+      Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
     },
-    body :JSON.stringify({query}),
-    cache: 'no-cache'
+    body: JSON.stringify({ query, varibles }),
+    cache: 'no-cache',
   })
 
-  const { data } = await  response.json()
+  const { data } = await response.json()
 
   return data
 }
