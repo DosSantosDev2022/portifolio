@@ -3,6 +3,8 @@ import { Poppins } from 'next/font/google'
 import './globals.css'
 import { SideBar } from './components/sidebar'
 import { Header } from './components/header'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const poppins = Poppins({
   weight: ['200', '300', '400', '500', '600', '700'],
@@ -26,11 +28,12 @@ export default function RootLayout({
           <SideBar />
           <div className="flex-1 flex flex-col">
             <Header />
-            <main className="flex-1 p-4 min-h-0 overflow-auto scrollbar-thin scrollbar-track-zinc-100 scrollbar-thumb-zinc-800 ">
+            <main className="flex-1 p-4 min-h-0 overflow-auto scrollbar scrollbar-track-zinc-900 scrollbar-thumb-zinc-800 ">
               {children}
             </main>
           </div>
         </div>
+        <ToastContainer />
       </body>
     </html>
   )
