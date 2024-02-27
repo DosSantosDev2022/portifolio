@@ -9,9 +9,13 @@ interface SocialNetworkContainerProps {
 export function SocialNetworkContainer({ data }: SocialNetworkContainerProps) {
   const link = data.sideBar.socials
   return (
-    <div className="flex gap-2">
+    <div className="flex gap-4">
       {link?.map((item) => (
-        <Link key={item.id} href={item.name}>
+        <Link
+          key={item.id}
+          href={item.name}
+          className="hover:scale-105 duration-500 transition-all"
+        >
           <CMSIcon icon={item.iconSvg} />
         </Link>
       ))}
