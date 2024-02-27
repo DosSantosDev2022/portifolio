@@ -29,7 +29,7 @@ export function ProjectCard({
           <p className="font-normal text-sm">{description} </p>
           <Link
             className="rounded-md w-24 text-center bg-violet-900 p-2 text-sm text-zinc-50 font-bold transition-all duration-500 hover:bg-violet-700"
-            href={`/Projects/${slug}`}
+            href={`/Project/${slug}`}
           >
             Ver Mais
           </Link>
