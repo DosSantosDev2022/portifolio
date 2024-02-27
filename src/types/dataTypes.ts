@@ -56,3 +56,34 @@ export type HomePageInfo = {
 export type HomePageData = {
   homePage: HomePageInfo
 }
+
+export type ProjectInfoData = {
+  slug: string
+  title: string
+  description: string
+  coverImage: {
+    url: string
+  }
+  deployLink: string
+  codeLink: string
+  technologies: Technology[]
+  completeDescription: {
+    raw: RichTextContent
+  }
+  carouseImage: {
+    image01: {
+      url: string
+    }
+    image02: {
+      url: string
+    }
+    image03: {
+      url: string
+    }
+  }
+  destaque: boolean
+}
+
+export type Project = {
+  project: ProjectInfoData[]
+}
