@@ -1,6 +1,6 @@
 import { HomePageInfo } from '@/types/dataTypes'
-import { CMSIcon } from './iconCms'
-import { MyTooltip } from './Tooltip'
+import { CMSIcon } from '@/app/components/iconCms'
+import { MyTooltip } from '@/app/components/Tooltip'
 
 interface TecnologiesProps {
   data: HomePageInfo

@@ -1,9 +1,9 @@
 import { HomePageData } from '@/types/dataTypes'
-import { fetchHygraph } from './api/fetchHygraph'
+import { fetchHygraph } from '@/app/api/fetchHygraph'
 import { AboutContainer } from './components/AboutContainer'
 import { Projects } from './components/ProjectsContainer'
 import { Tecnologies } from './components/tecnologies'
-import { Hero } from './components/hero'
+import { Hero } from '@/app/components/hero'
 
 const GET_ALL_DATA = async (): Promise<HomePageData> => {
   const query = `
