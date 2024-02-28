@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Button } from '@/app/components/ui/button'
 import { Technology } from '../components/Technology'
 
-export const GET_ALL_PROJECTS = async (): Promise<Project> => {
+export const GET_DETAILS_PROJECT = async (): Promise<Project> => {
   const query = `
   query Projects{
     project{
@@ -49,7 +49,7 @@ export default async function ProjectPageDetails({
 }: {
   params: { slug: string }
 }) {
-  const { project } = await GET_ALL_PROJECTS()
+  const { project } = await GET_DETAILS_PROJECT()
 
   const projectDetail = project.find((p) => p.slug === params.slug)
   const tech = projectDetail?.technologies

@@ -3,7 +3,7 @@ import { Hero } from '@/app/components/hero'
 import { Project } from '@/types/dataTypes'
 import { ProjectCard } from './components/projectCards'
 
-export const GET_ALL_PROJECTS = async (): Promise<Project> => {
+export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
   const query = `
     query Projects {
       project {
@@ -21,7 +21,7 @@ export const GET_ALL_PROJECTS = async (): Promise<Project> => {
 }
 
 export default async function ProjectsPage() {
-  const { project } = await GET_ALL_PROJECTS()
+  const { project } = await GET_ALL_CARD_PROJECTS()
   return (
     <div className="flex flex-col gap-3">
       <Hero
