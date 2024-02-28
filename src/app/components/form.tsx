@@ -1,6 +1,6 @@
 'use client'
 
-import { Button } from './button'
+import { Button } from '@/app/components/ui/button'
 import { useForm, SubmitHandler } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 
@@ -91,9 +91,7 @@ export function FormContact() {
           </span>
         )}
       </div>
-      <Button variant="highlight" className="w-full mt-2 ">
-        Enviar
-      </Button>
+      <Button className="w-full mt-2 ">Enviar</Button>
     </form>
   )
 }

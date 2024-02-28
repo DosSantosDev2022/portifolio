@@ -6,6 +6,14 @@ export type Technology = {
   id: string
 }
 
+export type Profile = {
+  profile: {
+    profileImage: {
+      url: string
+    }
+  }
+}
+
 export type hero = {
   title: string
   subtitle: string

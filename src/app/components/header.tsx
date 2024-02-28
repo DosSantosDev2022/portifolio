@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { AvatarComponent } from './avatar'
 
 export function Header() {
   const links = [
@@ -19,9 +20,11 @@ export function Header() {
     },
   ]
   const router = usePathname()
+
   return (
-    <header className="w-full h-[70px] bg-zinc-800 flex items-center p-2 rounded-sm ">
-      <nav className="flex items-center justify-end w-full p-6 gap-3">
+    <header className="w-full h-[90px] bg-zinc-800 flex items-center justify-around lg:justify-end px-4 py-6 rounded-sm ">
+      <AvatarComponent />
+      <nav className={`lg:flex items-center justify-end  gap-3 `}>
         {links.map((link) => (
           <Link
             className={`text-zinc-50 hover:bg-purple-600 duration-500 transition-all p-1 rounded-sm ${router === link.Url ? 'bg-purple-600' : 'hover:bg-purple-600'}`}

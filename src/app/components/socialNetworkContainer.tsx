@@ -9,7 +9,7 @@ interface SocialNetworkContainerProps {
 export function SocialNetworkContainer({ data }: SocialNetworkContainerProps) {
   const link = data.sideBar.socials
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 items-start ml-6 w-full">
       {link?.map((item) => (
         <Link
           key={item.id}

@@ -24,11 +24,11 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`bg-zinc-900 ${poppins.className} overflow-x-hidden`}>
-        <div className="flex p-8 gap-3 flex-row w-screen h-screen overflow-hidden ">
+        <div className="flex p-2 gap-3 flex-row  h-screen overflow-hidden ">
           <SideBar />
           <div className="flex-1 flex flex-col">
             <Header />
-            <main className="flex-1 p-4 min-h-0 overflow-auto scrollbar scrollbar-track-zinc-900 scrollbar-thumb-zinc-800 ">
+            <main className="min-h-0 overflow-auto scrollbar scrollbar-track-zinc-900 scrollbar-thumb-zinc-800 ">
               {children}
             </main>
           </div>

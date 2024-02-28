@@ -38,7 +38,7 @@ export default async function Home() {
   const { homePage } = await GET_ALL_DATA()
 
   return (
-    <div className="flex flex-col gap-3">
+    <div className="flex flex-col gap-3 px-6 py-7 lg:px-16">
       <Hero
         title={homePage.hero.title}
         subtitle={homePage.hero.subtitle}

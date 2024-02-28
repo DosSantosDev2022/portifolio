@@ -2,7 +2,7 @@ import { fetchHygraph } from '@/app/api/fetchHygraph'
 import { Project } from '@/types/dataTypes'
 import { RichText } from '@/app/components/richText'
 import Link from 'next/link'
-import { Button } from '@/app/components/button'
+import { Button } from '@/app/components/ui/button'
 import { Technology } from '../components/Technology'
 
 export const GET_ALL_PROJECTS = async (): Promise<Project> => {
@@ -110,10 +110,10 @@ export default async function ProjectPageDetails({
           /> */}
 
           <div className="mt-4 flex w-full items-start justify-start gap-3">
-            <Button asChild variant="highlight">
+            <Button asChild variant={'outline'}>
               <Link href={projectDetail.deployLink}>Deploy do projeto</Link>
             </Button>
-            <Button asChild variant="highlight">
+            <Button asChild variant={'outline'}>
               <Link target="_blank" href={projectDetail.codeLink}>
                 Repositório do projeto
               </Link>

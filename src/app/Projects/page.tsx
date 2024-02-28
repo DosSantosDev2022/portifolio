@@ -5,38 +5,17 @@ import { ProjectCard } from './components/projectCards'
 
 export const GET_ALL_PROJECTS = async (): Promise<Project> => {
   const query = `
-  query Projects {
-    project {
-      title
-      slug
-      description
-      deployLink
-      codeLink
-      coverImage {
-        url
-      }
-      technologies(first: 25) {
-        id
-        name
-        iconSvg
-      }
-      completeDescription {
-        raw
-      }
-      carouseImage {
-        image01 {
+    query Projects {
+      project {
+        title
+        slug
+        description
+        coverImage {
           url
         }
-        image02 {
-          url
-        }
-        image03 {
-          url
-        }
+        destaque
       }
-      destaque
     }
-  }
   `
   return fetchHygraph(query)
 }
