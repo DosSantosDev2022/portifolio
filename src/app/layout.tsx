@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`bg-zinc-900 ${poppins.className} overflow-x-hidden`}>
+      <body className={`bg-zinc-900 ${poppins.className} overflow-x-hidden antialiased`}>
         <div className="flex p-2 gap-3 flex-row  h-screen overflow-hidden ">
           <SideBar />
           <div className="flex-1 flex flex-col">
