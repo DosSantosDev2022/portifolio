@@ -10,7 +10,7 @@ interface HeroProps {
 export function Hero({ urlImage, paragraph, subtitle, title }: HeroProps) {
   return (
     <div
-      className="lg:w-full flex items-center justify-start p-5 lg:h-[467px] mt-2 bg-cover bg-no-repeat "
+      className="lg:w-full flex items-center justify-start p-5 lg:h-[467px] mt-2 bg-cover bg-no-repeat border"
       style={{
         backgroundImage: `url(${urlImage})`,
         backgroundPosition: 'center',

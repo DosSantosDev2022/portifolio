@@ -1,32 +1,35 @@
+'use client'
 import Image from 'next/image'
 import { InformationContainer } from './InformationContainer'
 import { SocialNetworkContainer } from './socialNetworkContainer'
 import Link from 'next/link'
 import { Button } from '@/app/components/ui/button'
-import { Modal } from '@/app/components/modal'
+import { Modal } from '@/app/components/SideBar/modal'
 
-
-
-export async function SideBar() {
-
+export function SideBar() {
   return (
-    <aside className="w-80 bg-zinc-800 hidden lg:flex flex-col items-center justify-around text-center rounded-md  px-2 py-2">
+    <aside className="lg:w-80 w-full h-full bg-zinc-800  flex flex-col gap-12 items-center justify-around text-center rounded-md  px-4 py-6">
       <div className="flex flex-col items-center gap-2">
         <Image
-          className="max-w-[50%] rounded-full border-2 border-zinc-100 "
+          className="w-[160px] rounded-full "
           src={'/Profile.png'}
           alt="Juliano Santos"
           width={400}
           height={400}
           quality={100}
         />
-        <h2 className="font-bold text-purple-700 mt-4">Desenvolvedor FullStack</h2>
+        <span className="text-zinc-50 font-semibold text-2xl">
+          Juliano Santos
+        </span>
+        <h2 className="font-medium text-sm text-purple-700">
+          Desenvolvedor FullStack
+        </h2>
       </div>
 
-      <div className="flex flex-col gap-5 w-full items-center justify-center text-start p-2 mt-2">
+      <div className="flex flex-col gap-5  items-center justify-center text-start p-2 mt-2">
         <SocialNetworkContainer />
         <InformationContainer />
-        <div className="flex items-start w-full ml-6 gap-2">
+        <div className="flex items-start w-full  gap-2">
           <Button className="px-2" variant={'default'}>
             <Link href="#">Ver Currículo</Link>
           </Button>

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import './globals.css'
-import { SideBar } from './components/sidebar'
 import { Header } from './components/header'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -22,17 +21,13 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`bg-zinc-900 ${poppins.className} overflow-x-hidden antialiased`}>
-        <div className="flex p-2 gap-3 flex-row  h-screen overflow-hidden ">
-          <SideBar />
-          <div className="flex-1 flex flex-col">
-            <Header />
-            <main className="min-h-0 overflow-auto scrollbar scrollbar-track-zinc-900 scrollbar-thumb-zinc-800 ">
-              {children}
-            </main>
-          </div>
-        </div>
+    <html
+      className="antialiased scrollbar scrollbar-track-zinc-900 scrollbar-thumb-zinc-800"
+      lang="pt-br"
+    >
+      <body className={`bg-zinc-900 ${poppins.className}  `}>
+        <Header />
+        <main>{children}</main>
         <ToastContainer />
       </body>
     </html>

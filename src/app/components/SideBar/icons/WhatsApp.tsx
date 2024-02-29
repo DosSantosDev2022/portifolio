@@ -1,14 +1,11 @@
-
-
-export function WhatsAppIcon(props) {
+export function WhatsAppIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={48}
-      height={48}
+      width={32}
+      height={32}
       viewBox="0 0 48 48"
       fill="none"
-      {...props}
     >
       <circle cx={24} cy={24} r={24} fill="url(#paint0_linear_501_11572)" />
       <path
@@ -50,4 +47,3 @@ export function WhatsAppIcon(props) {
     </svg>
   )
 }
-

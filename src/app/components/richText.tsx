@@ -39,9 +39,9 @@ export function RichText({ fontSize = 'md', ...props }: RichTextProps) {
           <h2 className="text-3xl font-bold text-violet-700">{children}</h2>
         ),
         ol: ({ children }) => <ol className="list-decimal">{children}</ol>,
-        ul: ({ children }) => <ul className="ml-5 list-disc">{children} </ul>,
+        ul: ({ children }) => <ul className="ml-5  list-disc">{children} </ul>,
         li: ({ children }) => (
-          <li className="font-light text-zinc-50 ">{children} </li>
+          <li className="font-light  text-zinc-50 ">{children} </li>
         ),
         h5: ({ children }) => (
           <h5

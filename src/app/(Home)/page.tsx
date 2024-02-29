@@ -1,9 +1,10 @@
 import { HomePageData } from '@/types/dataTypes'
 import { fetchHygraph } from '@/app/api/fetchHygraph'
-import { AboutContainer } from './components/AboutContainer'
-import { Projects } from './components/ProjectsContainer'
 import { Tecnologies } from './components/tecnologies'
-import { Hero } from '@/app/components/hero'
+import { SideBar } from '../components/SideBar/sidebar'
+import { Button } from '../components/ui/button'
+import Link from 'next/link'
+import { Projects } from './components/ProjectsContainer'
 
 const GET_ALL_DATA = async (): Promise<HomePageData> => {
   const query = `
@@ -38,16 +39,37 @@ export default async function Home() {
   const { homePage } = await GET_ALL_DATA()
 
   return (
-    <div className="flex flex-col gap-3 px-6 py-7 lg:px-16">
-      <Hero
-        title={homePage.hero.title}
-        subtitle={homePage.hero.subtitle}
-        paragraph={homePage.hero.description}
-        urlImage={homePage.hero.coverImage.url}
-      />
-      <AboutContainer data={homePage} />
-      <Tecnologies data={homePage} />
-      <Projects />
+    <div className="flex flex-col lg:flex-row lg:px-16 px-8 py-7  gap-6 ">
+      <SideBar />
+      <div className=" w-full rounded-md flex flex-col gap-8">
+        <div className="bg-zinc-800 w-full lg:h-[340px] px-5 py-4 rounded-md space-y-2 ">
+          <h1 className="text-zinc-50 font-bold text-4xl">Sobre mim</h1>
+          <p className="text-md text-zinc-100 font-light">
+            {homePage.hero.description}
+          </p>
+          <p className="text-md text-zinc-100 font-light">
+            {homePage.hero.description}
+          </p>
+          <div className="flex gap-2 items-center mt-2">
+            <Button asChild>
+              <Link href={''}>GitHub</Link>
+            </Button>
+            <Button>
+              <Link href={''}>Linkedin</Link>
+            </Button>
+          </div>
+        </div>
+        <div className="bg-zinc-800 w-full lg:h-36 px-5 py-4 rounded-md ">
+          <h2 className="text-zinc-50 font-bold text-4xl">Tecnologias</h2>
+          <Tecnologies data={homePage} />
+        </div>
+        <div className="bg-zinc-800 w-full lg:h-[340px] px-5 py-4 rounded-md ">
+          <h2 className="text-zinc-50 font-bold text-4xl">
+            Projetos em destaque
+          </h2>
+          <Projects />
+        </div>
+      </div>
     </div>
   )
 }

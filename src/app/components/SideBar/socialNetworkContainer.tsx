@@ -1,4 +1,3 @@
-import { SideBar } from '@/types/dataTypes'
 import Link from 'next/link'
 import { GitHubIcon } from './icons/GitHub'
 import { LinkedinIcon } from './icons/Linkedin'
@@ -9,29 +8,28 @@ const link = [
   {
     id: '1',
     url: 'https://github.com/DosSantosDev2022',
-    iconSvg: <GitHubIcon/>
+    iconSvg: <GitHubIcon />,
   },
   {
     id: '2',
     url: 'https://www.linkedin.com/in/dossantosdev/',
-    iconSvg: <LinkedinIcon/>
+    iconSvg: <LinkedinIcon />,
   },
   {
     id: '3',
     url: 'https://www.instagram.com/julianosantosdev/',
-    iconSvg:<InstagramIcon/>
+    iconSvg: <InstagramIcon />,
   },
   {
     id: '4',
     url: 'whatsapp',
-    iconSvg:<WhatsAppIcon/>
+    iconSvg: <WhatsAppIcon />,
   },
 ]
 
 export function SocialNetworkContainer() {
-  
   return (
-    <div className="flex gap-4 items-start ml-6 w-full">
+    <div className="flex gap-4 items-start  w-full">
       {link?.map((item) => (
         <Link
           key={item.id}
