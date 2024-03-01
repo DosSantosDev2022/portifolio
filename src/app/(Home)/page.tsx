@@ -2,9 +2,8 @@ import { HomePageData } from '@/types/dataTypes'
 import { fetchHygraph } from '@/app/api/fetchHygraph'
 import { Tecnologies } from './components/tecnologies'
 import { SideBar } from '../components/SideBar/sidebar'
-import { Button } from '../components/ui/button'
-import Link from 'next/link'
 import { Projects } from './components/ProjectsContainer'
+import { AboutContainer } from './components/AboutContainer'
 
 const GET_ALL_DATA = async (): Promise<HomePageData> => {
   const query = `
@@ -42,23 +41,7 @@ export default async function Home() {
     <div className="flex flex-col lg:flex-row lg:px-16 px-8 py-7  gap-6 ">
       <SideBar />
       <div className=" w-full rounded-md flex flex-col gap-8">
-        <div className="bg-zinc-800 w-full lg:h-[340px] px-5 py-4 rounded-md space-y-2 ">
-          <h1 className="text-zinc-50 font-bold text-4xl">Sobre mim</h1>
-          <p className="text-md text-zinc-100 font-light">
-            {homePage.hero.description}
-          </p>
-          <p className="text-md text-zinc-100 font-light">
-            {homePage.hero.description}
-          </p>
-          <div className="flex gap-2 items-center mt-2">
-            <Button asChild>
-              <Link href={''}>GitHub</Link>
-            </Button>
-            <Button>
-              <Link href={''}>Linkedin</Link>
-            </Button>
-          </div>
-        </div>
+        <AboutContainer hero={homePage.hero} />
         <div className="bg-zinc-800 w-full lg:h-36 px-5 py-4 rounded-md ">
           <h2 className="text-zinc-50 font-bold text-4xl">Tecnologias</h2>
           <Tecnologies data={homePage} />
