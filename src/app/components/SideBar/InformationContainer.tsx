@@ -24,14 +24,14 @@ const contacts = [
 
 export function InformationContainer() {
   return (
-    <section className="flex flex-col items-start justify-start w-full  gap-5 ">
-      <div className="flex flex-col justify-start gap-4 rounded-sm w-full">
+    <section className="flex w-full flex-col items-start justify-start  gap-5 ">
+      <div className="flex w-full flex-col justify-start gap-4 rounded-sm">
         {contacts.map((item) => (
           <div
             key={item.id}
-            className="flex justify-start gap-4 rounded-sm w-full"
+            className="flex w-full justify-start gap-4 rounded-sm"
           >
-            <i className="text-purple-600 mt-1">{item.iconSvg} </i>
+            <i className="mt-1 text-purple-600">{item.iconSvg} </i>
             <div className="flex flex-col gap-1 text-zinc-50">
               <h3 className="font-bold">{item.title} </h3>
               <p className="text-sm font-light">{item.contact} </p>

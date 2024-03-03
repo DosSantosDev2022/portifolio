@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export function Projects() {
   return (
-    <section className="flex flex-col gap-3 mt-5">
+    <section className="mt-5 flex flex-col gap-3">
       <p className="text-md font-light text-zinc-100">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore at
         rem fugit provident dolorum exercitationem, ducimus quisquam ratione
@@ -11,7 +11,7 @@ export function Projects() {
       </p>
       <Link
         href="#"
-        className="bg-zinc-700 p-2 rounded-md w-[120px] text-zinc-100"
+        className="w-[120px] rounded-md bg-zinc-700 p-2 text-zinc-100"
       >
         Ver Projetos
       </Link>

@@ -8,7 +8,7 @@ import { Modal } from '@/app/components/SideBar/modal'
 
 export function SideBar() {
   return (
-    <aside className="lg:w-80 w-full h-full bg-zinc-800  flex flex-col gap-12 items-center justify-around text-center rounded-md  px-4 py-6">
+    <aside className="flex h-full w-full flex-col  items-center justify-around gap-12 rounded-md bg-zinc-800 px-4 py-6  text-center lg:w-80">
       <div className="flex flex-col items-center gap-2">
         <Image
           className="w-[160px] rounded-full "
@@ -18,18 +18,18 @@ export function SideBar() {
           height={400}
           quality={100}
         />
-        <span className="text-zinc-50 font-semibold text-2xl">
+        <span className="text-2xl font-semibold text-zinc-50">
           Juliano Santos
         </span>
-        <h2 className="font-medium text-sm text-purple-700">
+        <h2 className="text-sm font-medium text-purple-700">
           Desenvolvedor FullStack
         </h2>
       </div>
 
-      <div className="flex flex-col gap-5  items-center justify-center text-start p-2 mt-2">
+      <div className="mt-2 flex flex-col  items-center justify-center gap-5 p-2 text-start">
         <SocialNetworkContainer />
         <InformationContainer />
-        <div className="flex items-start w-full  gap-2">
+        <div className="flex w-full items-start  gap-2">
           <Button className="px-2" variant={'default'}>
             <Link href="#">Ver Currículo</Link>
           </Button>

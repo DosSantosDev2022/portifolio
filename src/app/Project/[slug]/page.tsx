@@ -75,7 +75,7 @@ export default async function ProjectPageDetails({
         />
       </div>
 
-      <div className="w-full space-y-16 py-10 px-5 lg:w-[768px]  lg:py-20 lg:px-20 rounded-md bg-zinc-800 ">
+      <div className="w-full space-y-16 rounded-md bg-zinc-800 px-5  py-10 lg:w-[768px] lg:px-20 lg:py-20 ">
         <div className="flex flex-col gap-6 ">
           <h2 className="text-6xl font-bold text-zinc-50">
             {projectDetail.title}

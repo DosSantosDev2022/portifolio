@@ -29,12 +29,12 @@ const link = [
 
 export function SocialNetworkContainer() {
   return (
-    <div className="flex gap-4 items-start  w-full">
+    <div className="flex w-full items-start  gap-4">
       {link?.map((item) => (
         <Link
           key={item.id}
           href={item.url}
-          className="hover:scale-105 duration-500 transition-all"
+          className="transition-all duration-500 hover:scale-105"
         >
           <i>{item.iconSvg}</i>
         </Link>

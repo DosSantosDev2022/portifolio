@@ -54,12 +54,12 @@ export function FormContact() {
         <label htmlFor="name">Nome</label>
         <input
           type="text"
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           placeholder="Qual o seu nome ?"
           {...register('name')}
         />
         {errors && (
-          <span className="text-red-500 font-normal text-md">
+          <span className="text-md font-normal text-red-500">
             {errors.name?.message}
           </span>
         )}
@@ -68,12 +68,12 @@ export function FormContact() {
         <label htmlFor="email">Email</label>
         <input
           type="email"
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           placeholder="seuemail@email.com"
           {...register('email')}
         />
         {errors && (
-          <span className="text-red-500 font-normal text-md">
+          <span className="text-md font-normal text-red-500">
             {errors.email?.message}
           </span>
         )}
@@ -81,17 +81,17 @@ export function FormContact() {
       <div className="flex flex-col items-baseline justify-between gap-2">
         <label htmlFor="message">Mensagem</label>
         <textarea
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight text-gray-700 shadow focus:outline-none"
           placeholder="Deixe sua mensagem !"
           {...register('coments')}
         />
         {errors && (
-          <span className="text-red-500 font-normal text-md">
+          <span className="text-md font-normal text-red-500">
             {errors.coments?.message}
           </span>
         )}
       </div>
-      <Button className="w-full mt-2 ">Enviar</Button>
+      <Button className="mt-2 w-full ">Enviar</Button>
     </form>
   )
 }

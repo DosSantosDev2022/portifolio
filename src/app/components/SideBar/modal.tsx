@@ -24,8 +24,8 @@ export function Modal() {
           <DialogClose />
         </DialogHeader>
         <div className="mb-2">
-          <DialogTitle className="font-bold mb-2">Envie um e-mail</DialogTitle>
-          <DialogDescription className="text-zinc-700 font-medium text-sm">
+          <DialogTitle className="mb-2 font-bold">Envie um e-mail</DialogTitle>
+          <DialogDescription className="text-sm font-medium text-zinc-700">
             Vamos fechar uma parceria ?
           </DialogDescription>
         </div>

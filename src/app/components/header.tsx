@@ -23,15 +23,15 @@ export function Header() {
   const router = usePathname()
 
   return (
-    <header className=" w-full h-[90px] bg-zinc-800 flex items-center justify-around  px-4 py-6 rounded-sm ">
-      <h1 className="text-zinc-50 font-bold text-4xl">DosSantosDev</h1>
+    <header className=" flex h-[90px] w-full items-center justify-around rounded-sm  bg-zinc-800 px-4 py-6 ">
+      <h1 className="text-4xl font-bold text-zinc-50">DosSantosDev</h1>
       <Button className="lg:hidden">
         <Menu />
       </Button>
-      <nav className={`lg:flex items-center justify-end hidden gap-3 `}>
+      <nav className={`hidden items-center justify-end gap-3 lg:flex `}>
         {links.map((link) => (
           <Link
-            className={`text-zinc-50 hover:bg-purple-600 duration-500 transition-all p-1 rounded-sm ${router === link.Url ? 'bg-purple-600' : 'hover:bg-purple-600'}`}
+            className={`rounded-sm p-1 text-zinc-50 transition-all duration-500 hover:bg-purple-600 ${router === link.Url ? 'bg-purple-600' : 'hover:bg-purple-600'}`}
             key={link.nome}
             href={link.Url}
           >

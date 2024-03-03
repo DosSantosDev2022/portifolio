@@ -8,11 +8,11 @@ interface AboutProps {
 
 export function AboutContainer({ hero }: AboutProps) {
   return (
-    <div className="bg-zinc-800 w-full lg:h-[340px] px-5 py-4 rounded-md space-y-2 ">
-      <h1 className="text-zinc-50 font-bold text-4xl">Sobre mim</h1>
-      <p className="text-md text-zinc-100 font-light">{hero.description}</p>
-      <p className="text-md text-zinc-100 font-light">{hero.description}</p>
-      <div className="flex gap-2 items-center mt-2">
+    <div className="w-full space-y-2 rounded-md bg-zinc-800 px-5 py-4 lg:h-[340px] ">
+      <h1 className="text-4xl font-bold text-zinc-50">{hero.title}</h1>
+      <p className="text-md font-light text-zinc-100">{hero.description}</p>
+      <p className="text-md font-light text-zinc-100">{hero.description}</p>
+      <div className="mt-2 flex items-center gap-2">
         <Button asChild>
           <Link target="_blank" href={''}>
             GitHub
