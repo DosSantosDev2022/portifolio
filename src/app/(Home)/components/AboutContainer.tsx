@@ -1,28 +1,25 @@
-import { hero } from '@/types/dataTypes'
+import { about } from '@/types/dataTypes'
 import { Button } from '@/app/components/ui/button'
 import Link from 'next/link'
+import { RichText } from '@/app/components/richText'
 
 interface AboutProps {
-  hero: hero
+  about: about
 }
 
-export function AboutContainer({ hero }: AboutProps) {
+export function AboutContainer({ about }: AboutProps) {
   return (
     <div className="w-full space-y-2 rounded-md bg-zinc-800 px-5 py-4 lg:h-[340px] ">
-      <h1 className="text-4xl font-bold text-zinc-50">{hero.title}</h1>
-      <p className="text-md font-light text-zinc-100">{hero.description}</p>
-      <p className="text-md font-light text-zinc-100">{hero.description}</p>
+      <h1 className="text-4xl font-bold text-zinc-50">{about.title}</h1>
+      <RichText content={about.content.raw} />
       <div className="mt-2 flex items-center gap-2">
-        <Button asChild>
-          <Link target="_blank" href={''}>
-            GitHub
-          </Link>
-        </Button>
-        <Button>
-          <Link target="_blank" href={''}>
-            Linkedin
-          </Link>
-        </Button>
+        {about.aboutLinks.map((link) => (
+          <Button key={link.id} asChild>
+            <Link target="_blank" href={link.link}>
+              {link.name}
+            </Link>
+          </Button>
+        ))}
       </div>
     </div>
   )

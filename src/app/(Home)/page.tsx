@@ -27,6 +27,11 @@ const GET_ALL_DATA = async (): Promise<HomePageData> => {
         content {
           raw
         }
+        aboutLinks {
+          id
+          name
+          link
+        }
       }
     }
   }
@@ -41,7 +46,7 @@ export default async function Home() {
     <div className="flex flex-col gap-6 px-8 py-7 lg:flex-row  lg:px-16 ">
       <SideBar />
       <div className=" flex w-full flex-col gap-8 rounded-md">
-        <AboutContainer hero={homePage.hero} />
+        <AboutContainer about={homePage.about} />
         <div className="w-full rounded-md bg-zinc-800 px-5 py-4 lg:h-36 ">
           <h2 className="text-4xl font-bold text-zinc-50">Tecnologias</h2>
           <Tecnologies data={homePage} />
