@@ -14,20 +14,16 @@ export type Profile = {
   }
 }
 
-export type hero = {
-  title: string
-  subtitle: string
-  description: string
-  coverImage: {
-    url: string
-  }
-}
-
 export type about = {
   title: string
   content: {
     raw: RichTextContent
   }
+  aboutLinks: {
+    id: string
+    name: string
+    link: string
+  }[]
 }
 
 export type Socials = {
@@ -56,7 +52,6 @@ export type SideBar = {
 }
 
 export type HomePageInfo = {
-  hero: hero
   technologies: Technology[]
   about: about
 }
