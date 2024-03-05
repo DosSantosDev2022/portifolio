@@ -23,13 +23,13 @@ export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
 export default async function ProjectsPage() {
   const { project } = await GET_ALL_CARD_PROJECTS()
   return (
-    <div className="flex flex-col gap-3  lg:px-16 px-8 py-7 ">
+    <div className="flex flex-col gap-3  px-8 py-7 lg:px-16 ">
       <Hero
         title="Meus Projetos"
         subtitle="Conheça os meus melhores projetos"
       />
 
-      <div className="flex flex-wrap items-center justify-start gap-8 lg:px-16 px-8 py-7 ">
+      <div className="flex flex-wrap items-center justify-start gap-8 px-8 py-7 lg:px-16 ">
         {project.map((project) => (
           <ProjectCard
             key={project.title}

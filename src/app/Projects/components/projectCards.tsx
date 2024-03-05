@@ -15,7 +15,7 @@ export function ProjectCard({
   coverImage,
 }: ProjectCardProps) {
   return (
-    <div className=" h-[27rem] w-[21rem] min-w-[21rem] max-w-[21rem] space-y-2  overflow-hidden rounded-lg shadow-md bg-zinc-50">
+    <div className=" h-[27rem] w-[21rem] min-w-[21rem] max-w-[21rem] space-y-2  overflow-hidden rounded-lg bg-zinc-50 shadow-md">
       <Image
         className=" w-full rounded-sm"
         alt="Imagem descritiva do projeto"
@@ -23,12 +23,12 @@ export function ProjectCard({
         width={250}
         height={250}
       />
-      <div className="flex flex-col p-2 gap-2">
+      <div className="flex flex-col gap-2 p-2">
         <div className="flex flex-col gap-2">
-          <h1 className="font-bold text-lg">{title} </h1>
-          <p className="font-normal text-sm">{description} </p>
+          <h1 className="text-lg font-bold">{title}</h1>
+          <p className="text-sm font-normal">{description} </p>
           <Link
-            className="rounded-md w-24 text-center bg-violet-900 p-2 text-sm text-zinc-50 font-bold transition-all duration-500 hover:bg-violet-700"
+            className="w-24 rounded-md bg-violet-900 p-2 text-center text-sm font-bold text-zinc-50 transition-all duration-500 hover:bg-violet-700"
             href={`/Project/${slug}`}
           >
             Ver Mais
