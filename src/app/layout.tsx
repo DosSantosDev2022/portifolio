@@ -4,6 +4,7 @@ import './globals.css'
 import { Header } from './components/header'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { Footer } from './components/Footer'
 
 const poppins = Poppins({
   weight: ['200', '300', '400', '500', '600', '700'],
@@ -28,6 +29,7 @@ export default function RootLayout({
       <body className={`bg-zinc-900 ${poppins.className}  `}>
         <Header />
         <main>{children}</main>
+        <Footer />
         <ToastContainer />
       </body>
     </html>
