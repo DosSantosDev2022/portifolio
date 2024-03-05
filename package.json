@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.1",
     "@graphcms/rich-text-react-renderer": "^0.6.1",
     "@hookform/resolvers": "^3.3.2",
     "@radix-ui/colors": "^3.0.0",
