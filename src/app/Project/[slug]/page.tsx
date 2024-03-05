@@ -65,7 +65,7 @@ export default async function ProjectPageDetails({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center gap-20 px-6 py-7 lg:px-16  ">
+    <div className=" flex flex-col items-center justify-center gap-20 px-6 py-7 lg:px-16  ">
       <div className="relative h-[200px] w-full lg:h-[450px]">
         <div
           className="absolute inset-0 z-[-1]  "
@@ -77,7 +77,7 @@ export default async function ProjectPageDetails({
 
       <div className="w-full space-y-16 rounded-md bg-zinc-800 px-5  py-10 lg:w-[768px] lg:px-20 lg:py-20 ">
         <div className="flex flex-col gap-6 ">
-          <h2 className="text-6xl font-bold text-zinc-50">
+          <h2 className="text-4xl font-bold text-zinc-50 lg:text-6xl">
             {projectDetail.title}
           </h2>
           <p className="text-sm font-normal text-zinc-300">
@@ -121,6 +121,13 @@ export default async function ProjectPageDetails({
           </div>
         </div>
       </div>
+      <Button
+        className="animate-duration-[2000ms] animate-ease-in fixed bottom-4 right-4 animate-bounce"
+        variant={'highlights'}
+        asChild
+      >
+        <Link href={'/Projects'}>Voltar</Link>
+      </Button>
     </div>
   )
 }
