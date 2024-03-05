@@ -51,9 +51,28 @@ export type SideBar = {
   }
 }
 
+export type highlightsproject = {
+  slug: string
+  title: string
+  subtitle: string
+  description: string
+  coverImage: {
+    url: string
+  }
+}
+
 export type HomePageInfo = {
+  hero: {
+    title?: string
+    subtitle?: string
+    description?: string
+    coverImage?: {
+      url: string
+    }
+  }
   technologies: Technology[]
   about: about
+  highlightsproject: highlightsproject[]
 }
 
 export type HomePageData = {
