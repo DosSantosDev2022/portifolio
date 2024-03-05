@@ -33,6 +33,16 @@ const GET_ALL_DATA = async (): Promise<HomePageData> => {
           link
         }
       }
+      highlightsproject {
+        id
+        slug
+        title
+        subtitle
+        description
+        coverImage {
+          url
+        }
+      }
     }
   }
   `
@@ -47,16 +57,10 @@ export default async function Home() {
       <SideBar />
       <div className=" flex w-full flex-col gap-8 rounded-md">
         <AboutContainer about={homePage.about} />
-        <div className="w-full rounded-md bg-zinc-800 px-5 py-4 lg:h-36 ">
-          <h2 className="text-4xl font-bold text-zinc-50">Tecnologias</h2>
-          <Tecnologies data={homePage} />
-        </div>
-        <div className="w-full rounded-md bg-zinc-800 px-5 py-4 lg:h-[340px] ">
-          <h2 className="text-4xl font-bold text-zinc-50">
-            Projetos em destaque
-          </h2>
-          <Projects />
-        </div>
+
+        <Tecnologies data={homePage} />
+
+        <Projects hero={homePage} />
       </div>
     </div>
   )
