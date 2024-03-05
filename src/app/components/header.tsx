@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Button } from './ui/button'
-import { Menu } from 'lucide-react'
+import { LucideX, Menu } from 'lucide-react'
 import { useState } from 'react'
 
 export function Header() {
@@ -33,13 +33,13 @@ export function Header() {
     <header className=" flex w-full flex-col items-center justify-around gap-12 rounded-sm bg-zinc-800 px-4 py-6  lg:h-[90px] lg:flex-row lg:gap-0 ">
       <div className="flex w-full items-center justify-around lg:w-0">
         <h1 className="text-4xl font-bold text-zinc-50">DosSantosDev</h1>
-        <Button onClick={handleMenu} className="lg:hidden">
-          <Menu />
+        <Button aria-label="Menu" onClick={handleMenu} className="lg:hidden">
+          {menuIsOpen ? <LucideX /> : <Menu />}
         </Button>
       </div>
 
       <nav
-        className={` ${menuIsOpen ? 'flex ' : 'hidden'} items-center justify-end gap-3 lg:flex `}
+        className={` ${menuIsOpen ? 'flex' : ' hidden'} animate-menu-mobile-down items-center justify-end gap-3 lg:flex lg:animate-none `}
       >
         {links.map((link) => (
           <Link
