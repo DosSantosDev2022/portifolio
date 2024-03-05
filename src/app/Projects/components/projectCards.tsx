@@ -16,7 +16,7 @@ export function ProjectCard({
   coverImage,
 }: ProjectCardProps) {
   return (
-    <div className="flex h-full w-full flex-col justify-between space-y-2 rounded-lg  bg-zinc-50 p-6 shadow-md lg:w-[23rem]">
+    <div className="flex h-full w-full flex-col justify-between space-y-2 rounded-lg bg-zinc-50  p-6 shadow-md  lg:w-[23rem]">
       <div className="aspect-w-1 aspect-h-1 flex-shrink-0">
         <Image
           className=" w-full rounded-sm"
