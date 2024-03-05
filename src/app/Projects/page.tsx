@@ -2,6 +2,7 @@ import { fetchHygraph } from '@/app/api/fetchHygraph'
 import { Hero } from '@/app/components/hero'
 import { Project } from '@/types/dataTypes'
 import { ProjectCard } from './components/projectCards'
+import { Pagination } from './components/pagination'
 
 export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
   const query = `
@@ -23,7 +24,7 @@ export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
 export default async function ProjectsPage() {
   const { project } = await GET_ALL_CARD_PROJECTS()
   return (
-    <div className="flex flex-col items-center gap-20  px-4 py-7  lg:px-8 ">
+    <div className="flex  flex-col items-center  gap-20 px-4 py-7  lg:px-8 ">
       <Hero
         title="Meus Projetos"
         subtitle="Conheça os meus melhores projetos"
@@ -40,6 +41,8 @@ export default async function ProjectsPage() {
           />
         ))}
       </div>
+
+      <Pagination />
     </div>
   )
 }
