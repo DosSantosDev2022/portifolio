@@ -52,14 +52,14 @@ export type SideBar = {
 }
 
 export type hero = {
-  heros: {
+  hero: {
     title?: string
     subtitle?: string
     description?: string
     coverImage?: {
       url: string
     }
-  }[]
+  }
 }
 export type ProjectInfoData = {
   slug: string
