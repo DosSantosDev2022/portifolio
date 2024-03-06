@@ -30,7 +30,7 @@ export function Header() {
   const router = usePathname()
 
   return (
-    <header className=" flex w-full flex-col items-center justify-around gap-12 rounded-sm bg-zinc-800 px-4 py-6  lg:h-[90px] lg:flex-row lg:gap-0 ">
+    <header className="fixed top-0 z-50 flex w-full flex-col items-center justify-around gap-12 rounded-sm bg-zinc-800 px-4 py-6  lg:h-[90px] lg:flex-row lg:gap-0 ">
       <div className="flex w-full items-center justify-around lg:w-0">
         <h1 className="text-4xl font-bold text-zinc-50">DosSantosDev</h1>
         <Button aria-label="Menu" onClick={handleMenu} className="lg:hidden">
