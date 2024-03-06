@@ -1,21 +1,19 @@
-import { HomePageInfo } from '@/types/dataTypes'
+import { HighlightsProjects } from '@/types/dataTypes'
 import Image from 'next/image'
 import Link from 'next/link'
 
-interface ProjectsProps {
-  hero: HomePageInfo
+interface HighlightsProjectsProps {
+  project: HighlightsProjects
 }
 
-export function Projects({ hero }: ProjectsProps) {
-  const highlightsproject = hero.highlightsproject
+export async function HighlightsProjects({ project }: HighlightsProjectsProps) {
   return (
     <div className="flex w-full flex-col justify-between gap-6 rounded-md bg-zinc-800 px-5 py-4 ">
-      <h2 className="text-4xl font-bold text-zinc-50">{hero.hero.title} </h2>
-      <p className="text-md font-light text-zinc-100">
-        {hero.hero.description}
-      </p>
+      <h2 className="text-4xl font-bold text-zinc-50">Projetos em destaque</h2>
+      <p className="text-md font-light text-zinc-100"></p>
+
       <div className="flex flex-col items-center gap-4 lg:flex-row">
-        {highlightsproject.map((project) => (
+        {project.map((project) => (
           <Link
             href={`Project/${project.slug}`}
             key={project.title}
@@ -31,7 +29,7 @@ export function Projects({ hero }: ProjectsProps) {
             />
             <div className="flex flex-col items-start gap-1 text-start">
               <h2 className="text-md font-semibold">{project.title} </h2>
-              <p className="text-xs">{project.subtitle}</p>
+              <p className="text-xs">{''}</p>
             </div>
           </Link>
         ))}

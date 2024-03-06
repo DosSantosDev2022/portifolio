@@ -51,16 +51,6 @@ export type SideBar = {
   }
 }
 
-export type highlightsproject = {
-  slug: string
-  title: string
-  subtitle: string
-  description: string
-  coverImage: {
-    url: string
-  }
-}
-
 export type hero = {
   heros: {
     title?: string
@@ -71,25 +61,6 @@ export type hero = {
     }
   }[]
 }
-
-export type HomePageInfo = {
-  hero: {
-    title?: string
-    subtitle?: string
-    description?: string
-    coverImage?: {
-      url: string
-    }
-  }
-  technologies: Technology[]
-  about: about
-  highlightsproject: highlightsproject[]
-}
-
-export type HomePageData = {
-  homePage: HomePageInfo
-}
-
 export type ProjectInfoData = {
   slug: string
   title: string
@@ -117,6 +88,22 @@ export type ProjectInfoData = {
   destaque: boolean
 }
 
+export type HighlightsProjects = {
+  id: string
+  title: string
+  subtitle: string
+  slug: string
+  coverImage: {
+    url: string
+  }
+}[]
+
 export type Project = {
   project: ProjectInfoData[]
+}
+
+export type HomePageData = {
+  technologies: Technology[]
+  about: about
+  project: HighlightsProjects
 }

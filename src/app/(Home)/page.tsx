@@ -2,46 +2,35 @@ import { HomePageData } from '@/types/dataTypes'
 import { fetchHygraph } from '@/app/api/fetchHygraph'
 import { Tecnologies } from './components/tecnologies'
 import { SideBar } from '../components/SideBar/sidebar'
-import { Projects } from './components/ProjectsContainer'
+import { HighlightsProjects } from './components/HighlightsProjects'
 import { AboutContainer } from './components/AboutContainer'
 
-const GET_ALL_DATA = async (): Promise<HomePageData> => {
+const GET_DATA_HOMEPAGE = async (): Promise<HomePageData> => {
   const query = `
   query MyQuery {
-    homePage(where: {slug: "home"}) {
-      hero {
-        title
-        subtitle
-        description
-        coverImage {
-          url
-        }
+    about(where: {id: "clt1ksbej2zmi07lu9rr8rrgz"}) {
+      id
+      title
+      content {
+        raw
       }
-      technologies {
-        iconSvg
+      aboutLinks {
         id
         name
+        link
       }
-      about {
-        title
-        content {
-          raw
-        }
-        aboutLinks {
-          id
-          name
-          link
-        }
-      }
-      highlightsproject {
-        id
-        slug
-        title
-        subtitle
-        description
-        coverImage {
-          url
-        }
+    }
+    technologies {
+      id
+      name
+      iconSvg
+    }
+    project(where: {destaque: true}) {
+      title
+      slug
+      subtitle
+      coverImage {
+        url
       }
     }
   }
@@ -50,17 +39,17 @@ const GET_ALL_DATA = async (): Promise<HomePageData> => {
 }
 
 export default async function Home() {
-  const { homePage } = await GET_ALL_DATA()
+  const { technologies, about, project } = await GET_DATA_HOMEPAGE()
 
   return (
     <div className="flex flex-col gap-6 px-8 py-7 lg:flex-row  lg:px-16 ">
       <SideBar />
       <div className=" flex w-full flex-col gap-8 rounded-md">
-        <AboutContainer about={homePage.about} />
+        <AboutContainer about={about} />
 
-        <Tecnologies data={homePage} />
+        <Tecnologies technologies={technologies} />
 
-        <Projects hero={homePage} />
+        <HighlightsProjects project={project} />
       </div>
     </div>
   )

@@ -38,6 +38,7 @@ export const GET_ALL_HERO_DATA = async (): Promise<hero> => {
 
 export default async function ProjectsPage() {
   const { project } = await GET_ALL_CARD_PROJECTS()
+
   const { heros } = await GET_ALL_HERO_DATA()
   const hero = heros.find((h) => h)
 
