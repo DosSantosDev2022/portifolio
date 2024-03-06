@@ -61,6 +61,17 @@ export type highlightsproject = {
   }
 }
 
+export type hero = {
+  heros: {
+    title?: string
+    subtitle?: string
+    description?: string
+    coverImage?: {
+      url: string
+    }
+  }[]
+}
+
 export type HomePageInfo = {
   hero: {
     title?: string

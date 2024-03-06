@@ -65,17 +65,17 @@ export default async function ProjectPageDetails({
   }
 
   return (
-    <div className=" flex flex-col items-center justify-center gap-20 px-6 py-7 lg:px-16  ">
-      <div className="relative h-[200px] w-full lg:h-[450px]">
+    <div className="  flex flex-col items-center justify-center gap-10 px-4 lg:gap-20">
+      <div className="relative h-[200px] w-full lg:h-screen">
         <div
           className="absolute inset-0 z-[-1]  "
           style={{
-            background: `url(${projectDetail.coverImage.url}) no-repeat center/cover `,
+            background: `linear-gradient(180deg, rgba(24, 59, 86, 0.00) 0%, #27272a 80%, #18181b 100%) , url(${projectDetail.coverImage.url}) no-repeat center/cover `,
           }}
         />
       </div>
 
-      <div className="w-full space-y-16 rounded-md bg-zinc-800 px-5  py-10 lg:w-[768px] lg:px-20 lg:py-20 ">
+      <div className="w-full space-y-16 rounded-md bg-zinc-800 px-4 py-8 lg:w-[768px] lg:px-16 lg:py-16 ">
         <div className="flex flex-col gap-6 ">
           <h2 className="text-4xl font-bold text-zinc-50 lg:text-6xl">
             {projectDetail.title}
@@ -109,7 +109,7 @@ export default async function ProjectPageDetails({
             img03={projectDetail.carouseImage.image03.url}
           /> */}
 
-          <div className="mt-4 flex w-full items-start justify-start gap-3">
+          <div className="mt-4 flex w-full flex-col justify-start gap-3 lg:flex-row lg:items-start">
             <Button asChild variant={'default'}>
               <Link href={projectDetail.deployLink}>Deploy do projeto</Link>
             </Button>

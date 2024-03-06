@@ -28,7 +28,7 @@ export default function RootLayout({
     >
       <body className={`bg-zinc-900 ${poppins.className}  `}>
         <Header />
-        <main className="relative top-24 mb-36 ">{children}</main>
+        <main className="relative top-20 mb-36 ">{children}</main>
         <Footer />
         <ToastContainer />
       </body>

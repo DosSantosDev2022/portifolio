@@ -44,14 +44,12 @@ export function RichText({ fontSize = 'md', ...props }: RichTextProps) {
           <li className="font-light  text-zinc-50 ">{children} </li>
         ),
         h5: ({ children }) => (
-          <h5
-            className={` mt-4  font-bold text-zinc-200  ${getFontSizeClass()}`}
-          >
+          <h5 className={`  font-bold text-zinc-200  ${getFontSizeClass()}`}>
             {children}
           </h5>
         ),
         p: ({ children }) => (
-          <p className={` mt-4 font-light text-zinc-200 ${getFontSizeClass()}`}>
+          <p className={` font-light text-zinc-200 ${getFontSizeClass()}`}>
             {children}
           </p>
         ),
