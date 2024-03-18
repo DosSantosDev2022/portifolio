@@ -1,4 +1,4 @@
-import { CMSIcon } from '@/app/components/iconCms'
+import { CMSIcon } from '@/components/iconCms'
 
 interface TechnologyProps {
   icon: string

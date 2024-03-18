@@ -1,9 +1,9 @@
-import { HomePageData } from '@/types/dataTypes'
+import { HomePageData } from '@/types/index'
 import { fetchHygraph } from '@/app/api/fetchHygraph'
-import { Tecnologies } from './components/tecnologies'
-import { SideBar } from '../components/SideBar/sidebar'
-import { HighlightsProjects } from './components/HighlightsProjects'
-import { AboutContainer } from './components/AboutContainer'
+import { Tecnologies } from '@/components/Pages/home/tecnologies'
+import { SideBar } from '@/components/Pages/home/SideBar/sidebar'
+import { HighlightsProjects } from '@/components/Pages/home/HighlightsProjects'
+import { AboutContainer } from '@/components/Pages/AboutContainer'
 
 const GET_DATA_HOMEPAGE = async (): Promise<HomePageData> => {
   const query = `

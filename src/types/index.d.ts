@@ -1,20 +1,18 @@
 import type { RichTextContent } from '@graphcms/rich-text-types'
 
-export type Technology = {
+export interface Technology {
   iconSvg: string
   name: string
   id: string
 }
 
-export type Profile = {
-  profile: {
-    profileImage: {
-      url: string
-    }
+export interface Profile {
+  profileImage: {
+    url: string
   }
 }
 
-export type about = {
+export interface About {
   title: string
   content: {
     raw: RichTextContent
@@ -26,7 +24,7 @@ export type about = {
   }[]
 }
 
-export type Socials = {
+export interface Social {
   id: string
   name: string
   iconSvg: string
@@ -39,19 +37,15 @@ export interface InfoContact {
   iconSvg: string
 }
 
-export type SideBar = {
+export interface SideBar {
   sideBar: {
-    socials: Socials[]
+    socials: Social[]
     infoContacts: InfoContact[]
-    profile: {
-      profileImage: {
-        url: string
-      }
-    }
+    profile: Profile
   }
 }
 
-export type hero = {
+export interface InfoHero {
   hero: {
     title?: string
     subtitle?: string
@@ -61,7 +55,8 @@ export type hero = {
     }
   }
 }
-export type ProjectInfoData = {
+
+export interface ProjectInfoData {
   slug: string
   title: string
   description: string
@@ -88,7 +83,7 @@ export type ProjectInfoData = {
   destaque: boolean
 }
 
-export type HighlightsProjects = {
+export type HighlightedProject = {
   id: string
   title: string
   subtitle: string
@@ -96,14 +91,14 @@ export type HighlightsProjects = {
   coverImage: {
     url: string
   }
-}[]
+}
 
 export type Project = {
   project: ProjectInfoData[]
 }
 
-export type HomePageData = {
+export interface HomePageData {
   technologies: Technology[]
-  about: about
-  project: HighlightsProjects
+  about: About
+  project: HighlightedProject[]
 }

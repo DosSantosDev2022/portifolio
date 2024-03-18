@@ -1,7 +1,7 @@
 import { about } from '@/types/dataTypes'
-import { Button } from '@/app/components/ui/button'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { RichText } from '@/app/components/richText'
+import { RichText } from '@/components/richText'
 
 interface AboutProps {
   about: about

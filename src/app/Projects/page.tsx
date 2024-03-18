@@ -1,12 +1,12 @@
 import { fetchHygraph } from '@/app/api/fetchHygraph'
-import { Hero } from '@/app/components/hero'
-import { Project, hero } from '@/types/dataTypes'
-import { ProjectCard } from './components/projectCards'
-import { Pagination } from './components/pagination'
+import { Hero } from '@/components/hero'
+import { Project, InfoHero } from '@/types/index'
+import { ProjectCard } from '@/components/Pages/Projects/projectCards'
+import { Pagination } from '@/components/pagination'
 
 export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
   const query = `
-    query Projects {
+    query MyQuery {
       project {
         title
         slug
@@ -21,7 +21,7 @@ export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
   return fetchHygraph(query)
 }
 
-export const GET_ALL_HERO_DATA = async (): Promise<hero> => {
+export const GET_ALL_HERO_DATA = async (): Promise<InfoHero> => {
   const query = `
     query MyQuery {
       hero (where: {id: "cltdjtz790nor08lzadnt8bra"}) {

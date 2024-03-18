@@ -1,13 +1,13 @@
 import { fetchHygraph } from '@/app/api/fetchHygraph'
-import { Project } from '@/types/dataTypes'
-import { RichText } from '@/app/components/richText'
+import { Project } from '@/types/index'
+import { RichText } from '@/components/richText'
 import Link from 'next/link'
-import { Button } from '@/app/components/ui/button'
-import { Technology } from '../components/Technology'
+import { Button } from '@/components/ui/button'
+import { Technology } from '@/components/Pages/Project/Technology'
 
 export const GET_DETAILS_PROJECT = async (): Promise<Project> => {
   const query = `
-  query Projects{
+  query MyQuery{
     project{
       title
       slug

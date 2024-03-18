@@ -1,6 +1,6 @@
 import { Technology } from '@/types/dataTypes'
-import { CMSIcon } from '@/app/components/iconCms'
-import { MyTooltip } from '@/app/components/Tooltip'
+import { CMSIcon } from '@/components/iconCms'
+import { MyTooltip } from '@/components/Tooltip'
 
 interface TecnologiesProps {
   technologies: Technology[]

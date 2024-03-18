@@ -3,8 +3,8 @@ import Image from 'next/image'
 import { InformationContainer } from './InformationContainer'
 import { SocialNetworkContainer } from './socialNetworkContainer'
 import Link from 'next/link'
-import { Button } from '@/app/components/ui/button'
-import { Modal } from '@/app/components/SideBar/modal'
+import { Button } from '@/components/ui/button'
+import { Modal } from '@/components/Pages/home/SideBar/modal'
 
 export function SideBar() {
   return (

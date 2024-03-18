@@ -1,9 +1,9 @@
-import { HighlightsProjects } from '@/types/dataTypes'
+import { HighlightedProject } from '@/types/index'
 import Image from 'next/image'
 import Link from 'next/link'
 
 interface HighlightsProjectsProps {
-  project: HighlightsProjects
+  project: HighlightedProject[]
 }
 
 export async function HighlightsProjects({ project }: HighlightsProjectsProps) {

@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
-import './globals.css'
-import { Header } from './components/header'
+import '@/styles/globals.css'
+import { Header } from '@/components/header'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
-import { Footer } from './components/Footer'
+import { Footer } from '@/components/Footer'
 
 const poppins = Poppins({
   weight: ['200', '300', '400', '500', '600', '700'],
