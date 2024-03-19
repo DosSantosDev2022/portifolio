@@ -45,7 +45,7 @@ export default async function Home() {
   const { technologies, about, project } = await GET_DATA_HOMEPAGE()
 
   return (
-    <div className="flex flex-col gap-6 px-8 py-7 lg:flex-row  lg:px-16 ">
+    <div className="flex flex-col gap-6 px-4 py-7 lg:flex-row  lg:px-16 ">
       <SideBar />
       <div className=" flex w-full flex-col gap-8 rounded-md">
         <AboutContainer about={about} />

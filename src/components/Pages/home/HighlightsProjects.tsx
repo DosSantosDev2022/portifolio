@@ -28,8 +28,12 @@ export async function HighlightsProjects({ project }: HighlightsProjectsProps) {
               className="h-[80px] w-[80px] rounded-full bg-zinc-700 object-cover "
             />
             <div className="flex flex-col items-start gap-1 text-start">
-              <h2 className="text-md font-semibold">{project.title} </h2>
-              <p className="text-xs">{''}</p>
+              <h2 className="text-md font-semibold text-zinc-100">
+                {project.title}{' '}
+              </h2>
+              <p className="text-xs font-extralight tracking-wider	 text-zinc-300">
+                {project.subtitle}
+              </p>
             </div>
           </Link>
         ))}

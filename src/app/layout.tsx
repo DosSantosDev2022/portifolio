@@ -26,7 +26,7 @@ export default function RootLayout({
       className="antialiased scrollbar scrollbar-track-zinc-900 scrollbar-thumb-zinc-800"
       lang="pt-br"
     >
-      <body className={`bg-zinc-900 ${poppins.className}  `}>
+      <body className={`bg-zinc-900  ${poppins.className}  `}>
         <Header />
         <main className="relative top-20 mb-36 ">{children}</main>
         <Footer />
