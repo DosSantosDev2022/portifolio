@@ -1,7 +1,9 @@
 import type { RichTextContent } from '@graphcms/rich-text-types'
 
 export interface Technology {
-  iconSvg: string
+  icon: {
+    url: string
+  }
   name: string
   id: string
 }

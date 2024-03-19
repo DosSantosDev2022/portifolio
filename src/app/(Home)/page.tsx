@@ -23,7 +23,9 @@ const GET_DATA_HOMEPAGE = async (): Promise<HomePageData> => {
     technologies {
       id
       name
-      iconSvg
+      icon {
+        url
+      }
     }
     project(where: {destaque: true}) {
       title

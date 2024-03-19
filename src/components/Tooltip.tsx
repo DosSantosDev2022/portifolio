@@ -15,7 +15,7 @@ export function MyTooltip({ icon, nome }: MyTooltipProps) {
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger>{icon}</TooltipTrigger>
+        <TooltipTrigger className="">{icon}</TooltipTrigger>
         <TooltipContent>{nome}</TooltipContent>
       </Tooltip>
     </TooltipProvider>

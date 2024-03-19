@@ -20,7 +20,9 @@ export const GET_DETAILS_PROJECT = async (): Promise<Project> => {
       technologies(first: 25) {
         id
         name
-        iconSvg
+        icon{
+          url
+        }
       }
       completeDescription {
         raw
@@ -89,7 +91,7 @@ export default async function ProjectPageDetails({
             </span>
             <div className="flex flex-wrap items-center justify-start gap-2">
               {tech?.map((i) => (
-                <Technology key={i.name} icon={i.iconSvg} name={i.name} />
+                <Technology key={i.id} icon={i.icon?.url} name={i.name} />
               ))}
             </div>
           </div>
