@@ -20,7 +20,7 @@ const GET_DATA_HOMEPAGE = async (): Promise<HomePageData> => {
         link
       }
     }
-    technologies {
+    technologies(first: 26) {
       id
       name
       icon {
