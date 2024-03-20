@@ -19,7 +19,7 @@ export function Header() {
     },
     {
       nome: 'Projetos',
-      Url: '/Projects',
+      Url:`/Projects?page=1&limit=2`,
     },
     {
       nome: 'Contato',

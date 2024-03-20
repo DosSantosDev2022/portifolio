@@ -125,7 +125,7 @@ export default async function ProjectPageDetails({
       </div>
       <Button
         className="animate-duration-[2000ms] animate-ease-in fixed bottom-4 right-4 animate-bounce"
-        variant={'highlights'}
+        variant={'default'}
         asChild
       >
         <Link href={'/Projects'}>Voltar</Link>

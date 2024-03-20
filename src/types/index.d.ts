@@ -97,6 +97,7 @@ export type HighlightedProject = {
 
 export type Project = {
   project: ProjectInfoData[]
+  totalCount: number
 }
 
 export interface HomePageData {
