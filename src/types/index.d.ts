@@ -9,8 +9,13 @@ export interface Technology {
 }
 
 export interface Profile {
-  profileImage: {
-    url: string
+  profile: {
+    profileName: string
+    profileImage :{
+      url:string
+    }
+    carrer:string
+    bio:string
   }
 }
 
