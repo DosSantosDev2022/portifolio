@@ -1,27 +1,39 @@
-import { Button } from '@/components/ui/button'
-import { LucideChevronLeft, LucideChevronRight } from 'lucide-react'
+'use client'
+import {
+  Pagination as PaginationRoot,
+  PaginationContent,
+  PaginationItem,
+  PaginationLink,
+} from '@/components/ui/pagination'
+import {usePagination} from '@/hooks/usePagination'
 
-export function Pagination() {
+interface PaginationProps {
+  page: number
+  limit : number
+  total: number
+}
+
+export function Pagination({page,limit,total}: PaginationProps) {
+
+  const {pages} = usePagination({
+    page,limit,total
+  })
   return (
-    <div className="flex w-full items-center justify-center gap-2">
-      <Button size={'icon'} variant={'outline'}>
-        <LucideChevronLeft />
-      </Button>
-      <Button size={'icon'} variant={'outline'}>
-        1
-      </Button>
-      <Button size={'icon'} variant={'outline'}>
-        2
-      </Button>
-      <Button size={'icon'} variant={'outline'}>
-        3
-      </Button>
-      <Button size={'icon'} variant={'outline'}>
-        ...
-      </Button>
-      <Button size={'icon'} variant={'outline'}>
-        <LucideChevronRight />
-      </Button>
-    </div>
+     <div>
+      <PaginationRoot>
+        <PaginationContent>
+        {pages.map((pageNumber) => (
+            <PaginationItem key={page}>
+              <PaginationLink
+                className={`border rounded-sm hover:bg-slate-800 hover:text-slate-50 ${pageNumber === page ? 'bg-slate-800 text-slate-50' : ''} `}
+                href={`/Projects?page=${pageNumber}&limit=${limit}`}
+              >
+                {pageNumber}
+              </PaginationLink>
+            </PaginationItem>
+          ))}
+        </PaginationContent>
+     </PaginationRoot>
+     </div>
   )
 }
