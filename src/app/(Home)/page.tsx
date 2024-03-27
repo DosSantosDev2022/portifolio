@@ -41,7 +41,7 @@ const GET_DATA_HOMEPAGE = async (): Promise<HomePageData> => {
 }
 
 export default async function Home() {
-  await new Promise((resolve) => setTimeout(resolve, 3000))
+  await new Promise((resolve) => setTimeout(resolve, 1000))
   const { technologies, about, project } = await GET_DATA_HOMEPAGE()
 
   return (

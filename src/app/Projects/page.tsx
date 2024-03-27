@@ -4,10 +4,18 @@ import { Project, InfoHero } from '@/types/index'
 import { ProjectCard } from '@/components/Pages/Projects/projectCards'
 import { Pagination } from '@/components/pagination'
 
-export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
+interface ProjectsPageProps {
+  searchParams?: {
+    page:number
+    first: number
+    total:number
+  }
+}
+
+export const GET_ALL_CARD_PROJECTS = async (page: number, pageSize:number): Promise<Project> => {
   const query = `
-    query MyQuery {
-      project {
+    query MyQuery($first : Int, $skip: Int) {
+      project(first:$first, skip:$skip) {
         title
         slug
         description
@@ -16,9 +24,21 @@ export const GET_ALL_CARD_PROJECTS = async (): Promise<Project> => {
         }
         destaque
       }
+
+      projectConnection {
+        aggregate {
+          count
+        }
+      }
     }
   `
-  return fetchHygraph(query)
+
+  const skip = (page - 1) * pageSize
+  const variables = { first: pageSize, skip }
+  const { project, projectConnection } = await fetchHygraph(query, variables)
+  const totalCount = projectConnection.aggregate.count
+  return { project, totalCount }
+  
 }
 
 export const GET_ALL_HERO_DATA = async (): Promise<InfoHero> => {
@@ -36,9 +56,13 @@ export const GET_ALL_HERO_DATA = async (): Promise<InfoHero> => {
   return fetchHygraph(query)
 }
 
-export default async function ProjectsPage() {
+export default async function ProjectsPage({searchParams} :ProjectsPageProps ) {
+  const page = Number(searchParams?.page) || 1
+  const first = Number(searchParams?.first) || 2
+
   await new Promise((resolve) => setTimeout(resolve, 3000))
-  const { project } = await GET_ALL_CARD_PROJECTS()
+
+  const { project,totalCount } = await GET_ALL_CARD_PROJECTS(page,first)
   const { hero } = await GET_ALL_HERO_DATA()
 
   return (
@@ -61,7 +85,7 @@ export default async function ProjectsPage() {
         ))}
       </div>
 
-      <Pagination />
+      <Pagination limit={first}  total={totalCount} page={page}/>
     </div>
   )
 }
